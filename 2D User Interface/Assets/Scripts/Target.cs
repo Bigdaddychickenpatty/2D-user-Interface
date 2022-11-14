@@ -40,6 +40,8 @@ public class Target : MonoBehaviour
 
     private void OnMouseDown() 
     {
+        Debug.Log("You clicked on " + gameObject.name);
+        _gameManager.UpdateScore(PointValue);
         Destroy(this.gameObject);
     }
 
