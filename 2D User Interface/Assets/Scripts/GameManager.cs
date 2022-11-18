@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public bool IsGameActive;
     public int Score = 0;
-    public int SpawnRate = 1;
+    public float SpawnRate = 1;
     public TextMeshProUGUI ScoreText;
     //public TextMeshProUGUI GameTitleText;
     public TextMeshProUGUI GameOverText;
@@ -60,8 +60,11 @@ public class GameManager : MonoBehaviour
         while(IsGameActive)
         {
             yield return new WaitForSeconds(SpawnRate);
+            float xPos = Random.Range(0.0176f, -6.79f);
+            float yPos = -2;
+            Vector2 spawnPos = new Vector2(xPos, yPos);
             int index = Random.Range(0, Target.Count);
-            Instantiate(Target[index]);
+            Instantiate(Target[index], spawnPos, Target [index].transform.rotation);
         }
         
     }

@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aacb4d0b39650b48bdf71baf8cfc006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PointValue: -1
+  PointValue: -200000
   MinSpeed: 10
-  MaxSpeed: 20
-  MaxTorque: 10
+  MaxSpeed: 1000
+  MaxTorque: 1000
